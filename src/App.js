@@ -90,14 +90,13 @@ function App() {
   const [pendingTasksCount, setPendingTaskCount] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
   const [isEmpty, setIsEmpty] = useState(false)
+
   useEffect(() => {
     const localData = {
       todoList: localStorage.getItem("todoList"),
       pendingCount: localStorage.getItem("pendingCount"),
       completedCount: localStorage.getItem("completedCount"),
     };
-    console.log("comp", localData.completedCount);
-    console.log("pend", localData.pendingCount);
     localData.todoList
       ? setTodoList(JSON.parse(localData.todoList))
       : setTodoList([]);
@@ -105,10 +104,11 @@ function App() {
     localData.pendingCount
       ? setPendingTaskCount(JSON.parse(localData.pendingCount))
       : setPendingTaskCount(0);
+      
     localData.completedCount
       ? setCompletedTaskCount(JSON.parse(localData.completedCount))
       : setCompletedTaskCount(0);
-  }, []); // pk pas [tasks]
+  }, []); 
 
   const handleClick = () => {
     if (input.length === 0) {

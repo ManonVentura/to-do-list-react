@@ -8,7 +8,6 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Bold';
     font-size: 20px;
   }
-
 `;
 
 export { GlobalStyle };

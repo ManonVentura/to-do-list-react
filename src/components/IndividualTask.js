@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { updateCompletedCount, updatePendingCount } from "../utils";
 
 const Task = styled.div`
   list-style: none;
